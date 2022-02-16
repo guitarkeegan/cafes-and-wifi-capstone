@@ -1,0 +1,97 @@
+.title-section {
+  background-image: url("https://www.workflexibility.org/wp-content/uploads/Coffee-Shop-Conundrum-Cut-the-Wi-Fi-or-Cater-to-Remote-Workers.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+body {
+  color: #7B58FA;
+}
+
+.cup-logo {
+  height: 500px;
+  width: 500px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 5rem;
+
+}
+
+.title-top {
+  padding-left: 25%;
+}
+
+.title-bottom {
+  padding-right: 25%;
+}
+
+.search-items, .search-header, .new-listing-header {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.search-header {
+  color: black;
+}
+
+.add-listing-section {
+  color: white;
+  background-color: RGB(120, 77, 71);
+}
+
+form div  {
+  margin: 20px;
+}
+
+#submit {
+  margin: 40px 4px;
+}
+
+@media (min-width: 768px) {
+  .title-top {
+    padding-left: 30%;
+  }
+
+  .title-bottom {
+    padding-right: 30%;
+  }
+
+}
+
+@media (min-width: 992px){
+  .title-top {
+    padding-left: 40%;
+  }
+
+  .title-bottom {
+    padding-right: 40%;
+  }
+
+}
+
+ /* results page */
+
+.img-thumbnail {
+  margin-bottom: 20px;
+}
+
+.delete-buttons {
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px){
+
+.delete-buttons {
+  margin: 0px;
+}
+
+
+
+}
+
+

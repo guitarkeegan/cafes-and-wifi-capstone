@@ -1,0 +1,70 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+  <!-- title section, hero section? -->
+  <section class="container-fluid title-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-start title-top">
+          <h1>Cafes</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h1 class="middle-and">&</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-end title-bottom">
+          <h1>Wifi</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <img class="mx-auto cup-logo" src="static/img/cafes-and-wifi-cup.png" alt="coffee and wifi logo">
+        </div>
+        <div class="col-md-6 text-start pt-5">
+          <h2>Get Coffee.</h2>
+          <h2>Get Wifi.</h2>
+          <h2>Get Stuff Done.</h2>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- search section -->
+
+  <section>
+    <div class="container search-header">
+      <h2>Search by</h2>
+    </div>
+    <div class="list-group container search-items">
+
+        <a class="list-group-item list-group-item-action" href="{{ url_for('results', search='has_sockets') }}">Has Power Outlets</a>
+        <a class="list-group-item list-group-item-action" href="{{ url_for('results', search='has_toilet') }}">Bathrooms</a>
+        <a class="list-group-item list-group-item-action" href="{{ url_for('results', search='has_wifi') }}">Wifi</a>
+        <a class="list-group-item list-group-item-action" href="{{ url_for('results', search='can_take_calls') }}">Okay to Take Calls</a>
+        <a class="list-group-item list-group-item-action" href="{{ url_for('results', search='seats') }}">Number of Seats</a>
+        <a class="list-group-item list-group-item-action" href="{{ url_for('results', search='coffee_price') }}">Price of Coffee</a>
+
+    </div>
+  </section>
+
+  <!-- add new listing section for members -->
+
+  <section class="add-listing-section">
+    <div class="new-listing-header">
+      <h2>Add New Listing</h2>
+    </div>
+<!-- form here -->
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "light"}) }}
+      </div>
+    </div>
+  </div>
+    </section>
+{% include "footer.html" %}

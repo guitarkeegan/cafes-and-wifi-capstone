@@ -1,0 +1,40 @@
+{% include "header.html" %}
+
+<div class="container">
+  <h2>Results based on your search</h2>
+</div>
+
+<div class="container">
+  {% for cafe in all_cafes %}
+  <div class="row border-solid">
+    <div class="col">
+    <h2>{{ cafe.name }}: {{cafe.location}}</h2>
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-3">
+      <img class="img-thumbnail" src="{{cafe.img_url}}" alt="Cafe Image">
+    </div>
+    <div class="col-3">
+      <a class="btn btn-info directions" href="{{ cafe.map_url }}">Get Directions</a>
+      <a class="btn btn-danger delete-buttons" href="{{ url_for('delete', post_id=cafe.id) }}">Delete Listing</a>
+    </div>
+    <div class="col-3">
+      <p>has sockets: {{cafe.has_sockets}}</p>
+      <p>has restroom: {{cafe.has_toilet}}</p>
+      <p>price of coffee: {{cafe.coffee_price}}</p>
+    </div>
+    <div class="col-3">
+      <p>has wifi: {{cafe.has_wifi}}</p>
+      <p>can take calls: {{cafe.can_take_calls}}</p>
+      <p>number of seats: {{cafe.seats}}</p>
+    </div>
+  </div>
+
+
+
+
+
+  {% endfor %}
+</div>
+
